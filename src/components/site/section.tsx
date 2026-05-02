@@ -10,7 +10,7 @@ type SectionProps = {
 
 export function Section({ eyebrow, title, description, children, className = "" }: SectionProps) {
   return (
-    <section className={`py-16 sm:py-24 ${className}`}>
+    <section className={`py-14 sm:py-20 ${className}`}>
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-10 max-w-3xl">
           {eyebrow ? (

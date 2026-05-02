@@ -4,8 +4,8 @@ import { navItems, site } from "@/content/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t bg-[#111827] text-white">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr] lg:px-8">
+    <footer className="bg-background px-4 pb-4 sm:px-6 lg:px-8">
+      <div className="mx-auto grid max-w-7xl gap-8 rounded-[2rem] bg-[#111827] px-6 py-10 text-white md:grid-cols-[1.2fr_1fr_1fr] lg:px-8">
         <div>
           <p className="text-lg font-semibold">{site.name}</p>
           <p className="mt-3 max-w-sm text-sm leading-6 text-slate-300">
@@ -31,9 +31,9 @@ export function SiteFooter() {
             <span>{site.hours}</span>
           </div>
         </div>
-      </div>
-      <div className="border-t border-white/10 px-4 py-4 text-center text-xs text-slate-400">
+        <div className="border-t border-white/10 pt-6 text-xs text-slate-400 md:col-span-3">
         Original demo content inspired by public service information. Replace details before using as a live client site.
+        </div>
       </div>
     </footer>
   );

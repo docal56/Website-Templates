@@ -48,24 +48,24 @@ export default async function ServicePage({ params }: PageProps) {
         suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema(service)) }}
       />
-      <section className="border-b border-black/10 bg-[#fff8e7]">
-        <div className="mx-auto grid max-w-7xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_0.9fr] lg:px-8 lg:py-20">
-          <div className="flex flex-col justify-center">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-wide text-primary">
+      <section className="px-4 pb-10 pt-4 sm:px-6 lg:px-8">
+        <div className="round-panel mx-auto grid max-w-7xl gap-6 overflow-hidden bg-[#fff8e7] p-4 sm:p-6 lg:grid-cols-[1fr_0.9fr] lg:p-8">
+          <div className="flex flex-col justify-center rounded-[1.75rem] bg-white p-6 sm:p-8 lg:p-12">
+            <p className="mb-4 w-fit rounded-full bg-[#f3efe4] px-4 py-2 text-sm font-semibold uppercase tracking-wide text-primary">
               {service.eyebrow}
             </p>
-            <h1 className="max-w-3xl text-5xl font-semibold leading-tight tracking-tight text-balance sm:text-6xl">
+            <h1 className="max-w-3xl text-5xl font-semibold leading-[0.98] tracking-tight text-balance sm:text-7xl">
               {service.title} in {site.location}
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-8 text-pretty text-slate-700">{service.hero}</p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg" className="pressable bg-slate-950 text-white hover:bg-slate-800">
+              <Button asChild size="lg" className="pressable pill-button bg-slate-950 text-white hover:bg-slate-800">
                 <Link href="/online-bookings">
                   Book enquiry
                   <ArrowRight aria-hidden="true" />
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="pressable border-black/15 bg-white">
+              <Button asChild size="lg" variant="outline" className="pressable pill-button border-black/15 bg-white">
                 <Link href="/contact">Ask a question</Link>
               </Button>
             </div>
@@ -79,7 +79,7 @@ export default async function ServicePage({ params }: PageProps) {
         description={service.summary}
       >
         <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-          <Card className="surface-shadow rounded-lg border-black/10 bg-[#fff8e7]">
+          <Card className="surface-shadow rounded-[1.75rem] border-black/10 bg-[#fff8e7]">
             <CardHeader>
               <CardTitle>What this page supports</CardTitle>
             </CardHeader>
@@ -92,7 +92,7 @@ export default async function ServicePage({ params }: PageProps) {
               ))}
             </CardContent>
           </Card>
-          <Card className="surface-shadow rounded-lg border-black/10">
+          <Card className="surface-shadow rounded-[1.75rem] border-black/10">
             <CardHeader>
               <CardTitle>Request a callback</CardTitle>
             </CardHeader>
