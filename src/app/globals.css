@@ -49,20 +49,20 @@
 }
 
 :root {
-  --background: oklch(0.995 0.004 106);
-  --foreground: oklch(0.19 0.025 240);
+  --background: oklch(0.985 0.012 95);
+  --foreground: oklch(0.17 0.022 240);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.19 0.025 240);
+  --card-foreground: oklch(0.17 0.022 240);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.19 0.025 240);
-  --primary: oklch(0.43 0.115 190);
-  --primary-foreground: oklch(0.985 0.004 106);
-  --secondary: oklch(0.96 0.026 80);
+  --popover-foreground: oklch(0.17 0.022 240);
+  --primary: oklch(0.34 0.095 188);
+  --primary-foreground: oklch(0.985 0.012 95);
+  --secondary: oklch(0.94 0.026 85);
   --secondary-foreground: oklch(0.25 0.04 235);
-  --muted: oklch(0.96 0.008 230);
+  --muted: oklch(0.93 0.012 95);
   --muted-foreground: oklch(0.47 0.025 245);
-  --accent: oklch(0.78 0.16 72);
-  --accent-foreground: oklch(0.19 0.025 240);
+  --accent: oklch(0.79 0.16 76);
+  --accent-foreground: oklch(0.17 0.022 240);
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.89 0.012 230);
   --input: oklch(0.89 0.012 230);
@@ -122,9 +122,28 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
   }
   html {
     @apply font-sans;
+  }
+  ::selection {
+    @apply bg-accent text-accent-foreground;
+  }
+}
+
+@layer utilities {
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .surface-shadow {
+    box-shadow:
+      0 1px 1px oklch(0.17 0.022 240 / 8%),
+      0 16px 48px oklch(0.17 0.022 240 / 10%);
+  }
+
+  .pressable {
+    @apply transition-transform duration-150 active:scale-[0.96];
   }
 }

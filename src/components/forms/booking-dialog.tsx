@@ -21,7 +21,7 @@ export function BookingDialog({ service }: BookingDialogProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button className="w-full" size="sm">
+        <Button className="pressable w-full bg-slate-950 text-white hover:bg-slate-800" size="sm">
           <CalendarPlus aria-hidden="true" />
           Book enquiry
         </Button>

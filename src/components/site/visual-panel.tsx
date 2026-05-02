@@ -1,4 +1,4 @@
-import { Flame, Wrench } from "lucide-react";
+import { CalendarCheck, Flame, MapPin, Wrench } from "lucide-react";
 
 type VisualPanelProps = {
   label: string;
@@ -9,28 +9,45 @@ export function VisualPanel({ label, variant = "boiler" }: VisualPanelProps) {
   const Icon = variant === "boiler" ? Flame : Wrench;
 
   return (
-    <div className="relative min-h-[360px] overflow-hidden rounded-lg border bg-slate-900 shadow-2xl">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_22%_18%,rgba(245,158,11,0.28),transparent_28%),linear-gradient(135deg,#0f766e_0%,#0f172a_62%,#020617_100%)]" />
-      <div className="absolute inset-x-8 top-8 h-24 rounded-md border border-white/15 bg-white/10 backdrop-blur-sm" />
-      <div className="absolute left-8 top-20 h-52 w-40 rounded-md border border-slate-300/60 bg-slate-100 shadow-xl">
-        <div className="m-4 h-24 rounded-md bg-slate-300" />
-        <div className="mx-4 grid gap-2">
-          <span className="h-2 rounded bg-slate-400" />
-          <span className="h-2 rounded bg-slate-300" />
-          <span className="h-2 w-2/3 rounded bg-slate-300" />
+    <div className="surface-shadow relative min-h-[420px] overflow-hidden rounded-lg border border-black/10 bg-white">
+      <div className="absolute inset-x-0 top-0 h-28 bg-[#0f766e]" />
+      <div className="absolute inset-x-6 top-6 rounded-lg border border-black/10 bg-[#fff8e7] p-5 shadow-xl">
+        <div className="flex items-center justify-between gap-4">
+          <span className="text-sm font-semibold">Live booking dashboard</span>
+          <span className="rounded-full bg-amber-300 px-3 py-1 text-xs font-semibold text-slate-950">Demo</span>
+        </div>
+        <div className="mt-5 grid gap-3 sm:grid-cols-3">
+          {["Service", "Area", "Urgency"].map((item) => (
+            <span key={item} className="h-12 rounded-md bg-white shadow-sm" />
+          ))}
         </div>
       </div>
-      <div className="absolute bottom-10 right-8 w-56 rounded-lg border border-white/15 bg-white/95 p-4 text-slate-950 shadow-xl">
-        <div className="mb-4 flex items-center gap-3">
-          <span className="grid size-10 place-items-center rounded-md bg-amber-400 text-slate-950">
-            <Icon aria-hidden="true" />
-          </span>
-          <span className="text-sm font-semibold">{label}</span>
+      <div className="absolute bottom-8 left-6 right-6 grid gap-4 sm:grid-cols-[1fr_0.82fr]">
+        <div className="rounded-lg border border-black/10 bg-slate-950 p-5 text-white shadow-xl">
+          <div className="flex items-center gap-3">
+            <span className="grid size-10 place-items-center rounded-md bg-amber-300 text-slate-950">
+              <Icon aria-hidden="true" />
+            </span>
+            <div>
+              <p className="text-sm text-slate-300">Selected enquiry</p>
+              <p className="font-semibold">{label}</p>
+            </div>
+          </div>
+          <div className="mt-6 grid gap-3">
+            <span className="h-2 rounded bg-white/30" />
+            <span className="h-2 rounded bg-white/20" />
+            <span className="h-2 w-2/3 rounded bg-white/20" />
+          </div>
         </div>
-        <div className="grid gap-2">
-          <span className="h-2 rounded bg-slate-200" />
-          <span className="h-2 rounded bg-slate-200" />
-          <span className="h-2 w-3/4 rounded bg-slate-200" />
+        <div className="grid gap-4">
+          <div className="rounded-lg border border-black/10 bg-white p-4 shadow-lg">
+            <CalendarCheck className="mb-3 size-5 text-primary" aria-hidden="true" />
+            <p className="text-sm font-semibold">Preferred date captured</p>
+          </div>
+          <div className="rounded-lg border border-black/10 bg-white p-4 shadow-lg">
+            <MapPin className="mb-3 size-5 text-primary" aria-hidden="true" />
+            <p className="text-sm font-semibold">Postcode routed</p>
+          </div>
         </div>
       </div>
     </div>

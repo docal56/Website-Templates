@@ -4,7 +4,7 @@ import { navItems, site } from "@/content/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t bg-slate-950 text-white">
+    <footer className="border-t bg-[#111827] text-white">
       <div className="mx-auto grid max-w-7xl gap-8 px-4 py-10 sm:px-6 md:grid-cols-[1.2fr_1fr_1fr] lg:px-8">
         <div>
           <p className="text-lg font-semibold">{site.name}</p>

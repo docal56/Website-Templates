@@ -51,6 +51,44 @@ export const credentials = [
   "Buy With Confidence style trust signal",
 ];
 
+export const metrics = [
+  {
+    value: "2004",
+    label: "Established local service foundation",
+  },
+  {
+    value: "6",
+    label: "Core local areas highlighted for SEO",
+  },
+  {
+    value: "24h",
+    label: "Fast callback expectation for new enquiries",
+  },
+];
+
+export const processSteps = [
+  {
+    title: "Choose the service",
+    description: "Visitors select boiler, plumbing, landlord or heating support from a focused booking page.",
+    points: ["Service intent", "Area served", "Job type"],
+  },
+  {
+    title: "Share the details",
+    description: "The form or assistant captures the essentials so the business can respond with context.",
+    points: ["Postcode", "Urgency", "Preferred time"],
+  },
+  {
+    title: "Qualify the enquiry",
+    description: "The lead is routed to email and optionally Google Sheets, with the assistant helping unsure visitors.",
+    points: ["Name and phone", "Job summary", "Callback route"],
+  },
+  {
+    title: "Book the next step",
+    description: "The team confirms timing, suitability and whether a survey, callout or quote is needed.",
+    points: ["Quote", "Survey", "Appointment"],
+  },
+];
+
 export const services = [
   {
     slug: "boiler-installation",

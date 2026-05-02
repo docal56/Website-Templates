@@ -96,7 +96,7 @@ function SubmitButton() {
   const { pending } = useFormStatus();
 
   return (
-    <Button type="submit" disabled={pending} className="w-full sm:w-fit">
+    <Button type="submit" disabled={pending} className="pressable w-full bg-slate-950 text-white hover:bg-slate-800 sm:w-fit">
       {pending ? "Sending..." : "Send enquiry"}
     </Button>
   );

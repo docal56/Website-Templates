@@ -15,12 +15,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-slate-950 px-4 py-16 text-white sm:px-6 lg:px-8">
+      <section className="border-b border-black/10 bg-[#fff8e7] px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+          <h1 className="max-w-3xl text-5xl font-semibold leading-tight tracking-tight text-balance sm:text-6xl">
             Contact and callback enquiries.
           </h1>
-          <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-200">
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-pretty text-slate-700">
             A simple contact route for visitors who need a callback, quote or advice before booking.
           </p>
         </div>
@@ -28,7 +28,7 @@ export default function ContactPage() {
 
       <Section title="Send the details once, route them clearly.">
         <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-          <Card className="rounded-lg">
+          <Card className="surface-shadow rounded-lg border-black/10 bg-[#fff8e7]">
             <CardHeader>
               <CardTitle>Demo contact details</CardTitle>
             </CardHeader>
@@ -50,7 +50,7 @@ export default function ContactPage() {
               </p>
             </CardContent>
           </Card>
-          <Card className="rounded-lg">
+          <Card className="surface-shadow rounded-lg border-black/10">
             <CardHeader>
               <CardTitle>Enquiry form</CardTitle>
             </CardHeader>
